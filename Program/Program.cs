@@ -4,22 +4,24 @@ using CursoDomain.Programa3;
 using System.Drawing;
 
 
+var fechaNacimiento = new DateTime(2003, 4, 20);
 
-
-Persona persona1 = new Persona("Baljeet", 19, "Santiago");
+Persona persona1 = new Estudiante("Baljeet", "Santiago", "Mecatronica", "2022-1969" , fechaNacimiento);
 Console.WriteLine("\n");
 Console.WriteLine("======PERSONA:=======");
 
+
+
+
+ persona1.CalcularEdad();
 persona1.MostrarInfoPersona();
-persona1.CalcularEdad();
 
 
 
-
-Estudiante estudiante1 = new Estudiante("Baljeet", 19, "Santiago", "Mecatronica", "2022-1969");
+Estudiante estudiante1 = new Estudiante("Baljeet", "Santiago", "Mecatronica", "2022-1969", fechaNacimiento);
 Console.WriteLine("\n");
 Console.WriteLine("======ESTUDIANTE:=======");
-estudiante1.MostrarInfoEstudiante();
+estudiante1.MostrarEstudiante();
 
 
 

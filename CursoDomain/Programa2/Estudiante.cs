@@ -6,27 +6,32 @@ namespace CursoDomain.Programa2
 
     public class Estudiante : Persona
     {
-         private string carrera;
-         private string matricula;
+         private string Carrera;
+         private string Matricula;
+        
+         
+       
 
 
-        public Estudiante( string nombre, int edad, string ciudad, string carrera, string matricula) : base(nombre, edad, ciudad)
+        public Estudiante( string nombre,string ciudad, string carrera, string matricula, DateTime fechaDeNacimiento) : base(nombre, ciudad, fechaDeNacimiento)
         {
-            this.nombre = nombre;
-            this.edad = edad;
-            this.ciudad = ciudad;
-            this.carrera = carrera;
-            this.matricula = matricula; 
+            
+            Carrera = carrera;
+            Matricula = matricula;
 
         }
 
-        public void MostrarInfoEstudiante()
+        public override void MostrarInfoPersona()
         {
-           
-            Console.WriteLine($"Nombre: {nombre}, Edad: {edad}, Ciudad: {ciudad}, Carrera: {carrera}, Matrícula: {matricula}");
+            base.MostrarInfoPersona();
+          
         }
 
-
+        public  void MostrarEstudiante()
+        {
+            base.MostrarInfoPersona();
+            Console.WriteLine($"Carrera: {Carrera}, Matrícula: {Matricula}");
+        }
 
 
     }
